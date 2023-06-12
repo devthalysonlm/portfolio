@@ -1,0 +1,170 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');/*Esse lik é o da fonte no qual eu trago para o meu projeto
+ através do google font e por lá quando nos selecionamos mais de um tipo de fonte, podemos importar através de um único link e só selecionar o tamanho
+ em sua tag correspondente */
+
+
+
+:root{
+    --cor-primaria: #0A4D68; /*Cores do back-ground */
+    --cor-secundaria: #E0E7E9; /*Letras */
+    --cor-terciaria: #00FFCA; /*Strog */
+    --cor-hover: #395B64; /* Botão*/
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat',sans-serif;
+
+}
+
+
+
+
+*{  /* Essa função faz com que seja feito o reset de todas a propriedades de margem que são geradas automaticamente pelos navegadores também deve ser adaotada como padrão */
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body{
+   /* height: 100vh; Nessa parte nos fazemos com que utliziemos todo o campo da pagina para edição, sempre é bom fazer nos projetos como padrão */
+    box-sizing: border-box; /* Esse elemento faz com que todas as tags filhas que estiverem dentro de uma tag pai não saiam para fora da página */
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+.destaque-titulo{
+    color: var(--cor-terciaria);
+}
+.cabecalho{
+    padding: 2% 20%;
+  
+}
+.cabecalho-menu{
+    display: flex;
+    gap: 80px;
+}
+.cabecalho-menu-link{
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600px;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+    
+    
+}
+.apresentacao{
+    padding: 4% 20%;
+    display: flex; /*Alinha todas as propriedades uma do lado da outra */
+    align-items: center; /* Essa função alinha todas os itens no centro da página */
+    justify-content: space-between; /*Cria um espaçamento entre os elementos no caso de margem zero ele faz com que cada um fique em seu respectivo canto sem espaçamento */
+    gap: 82px; /* Esse elemento faz com que tenha um espaço entre a imagem e o conteúdo */
+}
+p{
+    
+    color: aliceblue;
+}
+.apresentacao-conteudo{
+    width: 50%; /* Define o tamando da margem do meu bloco de conteúdo */
+    display: flex;
+    flex-direction: column; /*Nesse caso essa tag vai definir o layout dos blocos de informações no caso em colunas também podendo ser em linha e etc... */
+    gap: 40px; /* Essa opção vai definir a quantidade de espaçamento entre os elementos. Aceita um ou dois valore. */
+}  
+.apresentacao-conteudo-titulo{
+    font-size: 2.25rem;   /*Define o tamanho da fonte da tag correspondente repare que essa unidade de medida em rem faz com que a fonte do meu site acompanhe a fonte do navegad */
+    font-family: var(--fonte-primaria); /*Essa tag eu chamo a fonte em que eu acabei de importar para o meu projeto. Confira na parte superior do CSS. */
+}
+.apresentacao-conteudo-texto{
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+}
+.apresentacao-links{
+    display: flex;
+    justify-content: space-between;
+    flex-direction:column;
+    align-items: center;
+    gap: 32px;
+ 
+   
+}
+.apresentacao-links-subtitulo{
+
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    color: aliceblue;
+    font-size: 1.5rem;
+}
+
+
+.apresentacao-links-navegacao{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor-terciaria);
+    width: 50%; /* Alarga para o lado */
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    padding: 21.5px 0; /* Podemos atribuir o valor do paading somente para o vertical deixando o segundo valor em 0 se não formos mecher */
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+
+}
+img{
+    border-radius: 50px;
+}
+.apresentacao-links-navegacao:hover{
+    background-color: var(--cor-hover); /*Hover nesse caso seria o botão trocar de cor quando eu colocar o mouse em cima dele */
+}
+.apresentacao-imagem{
+   width: 50%; 
+}
+.rodape{
+    padding: 24px; 
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400px;
+}
+.apresentacao-links-link-curso{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor-terciaria);
+    width: 378PX; /* Alarga para o lado */
+    text-align: left;
+    border-radius: 8px;
+    font-size: 1rem;
+    padding: 21.5px 0; /* Podemos atribuir o valor do paading somente para o vertical deixando o segundo valor em 0 se não formos mecher */
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+}
+.apresentacao-links-link-curso:hover{
+    background-color: var(--cor-hover); /*Hover nesse caso seria o botão trocar de cor quando eu colocar o mouse em cima dele */
+
+}
+@media (max-width: 1448PX ) {
+    .cabecalho{
+        padding: 6%
+        
+
+    }
+    .cabecalho-menu{
+        justify-content: center;
+    }
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .apresentacao-conteudo{
+        width: auto;
+    }
+    
+
+    
+}
